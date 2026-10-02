@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-source="private">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A thoughtful daily notebook for Mac and iPhone. Plan visually, write freely, and keep every day in a plain Markdown file you own.">
+  <meta name="theme-color" content="#f3efdf">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="daybound — A little structure. Room for the rest.">
+  <meta property="og:description" content="Your plans, tasks, and passing thoughts. One plain-text file. Mac, iPhone, and widgets.">
+  <link rel="canonical" href="https://daybound.page/">
+  <meta property="og:url" content="https://daybound.page/">
+  <meta property="og:image" content="https://daybound.page/assets/showcase/social.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:image:alt" content="daybound's notebook and day planner, with fictional demo notes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://daybound.page/assets/showcase/social.png">
+  <title>daybound — A little structure. Room for the rest.</title>
+  <link rel="icon" href="assets/logo-app.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="daybound home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>daybound</a>
+    <nav aria-label="Main navigation"><a href="#experience">The experience</a><a href="#pocket">In your pocket</a><a href="#craft">The craft</a><a class="nav-source source-link" href="https://github.com/dhirajcdry/daybound">View source <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span>A notebook, close at hand</p>
+        <h1>A day.<br>A page.<br><em>A little peace.</em></h1>
+        <p class="hero-description">A little structure for the things you want to do. A little room for the things you want to say.</p>
+        <div class="hero-actions"><a class="button" href="#experience">See the day unfold <span aria-hidden="true">↓</span></a><a class="text-link" href="#try">Try the editor ↗</a></div>
+        <p class="platforms">Made for Mac & iPhone <span>·</span> Yours in plain text</p>
+      </div>
+      <div class="hero-art reveal"><img src="assets/showcase/hero-scene.png" alt="daybound's actual Mac notebook and Day view, native iPhone app, and SwiftUI widget layout preview with fictional notes" width="1650" height="1180" fetchpriority="high"></div>
+    </section>
+    <div class="manifesto"><span>One day. One file.</span><p>Less managing your life.<br><em>More living your day.</em></p><span>YYYY-MM-DD.md</span></div>
+    <section class="experience section" id="experience">
+      <div class="experience-copy reveal">
+        <p class="eyebrow">01 / At your desk</p>
+        <h2>A page that<br><em>gets out of<br>your way.</em></h2>
+        <p>Open the menubar. Write the thought. Return to your day. Tasks, time blocks, and your journal share one quietly editable page.</p>
+        <ol class="feature-list"><li><b>Write directly on the page.</b><span>Markdown reveals itself on the line you’re editing. Move away and the page settles back into place.</span></li><li><b>Give the day a shape.</b><span>Drag, move, and resize time blocks. Every change becomes a line in the same Markdown file.</span></li><li><b>Keep the thread.</b><span>Carry unfinished tasks forward, start a timestamped journal entry, and leave a word about your mood.</span></li></ol>
+        <div class="menubar-preview" aria-label="Rendered example of the native menubar countdown"><img src="assets/showcase/badge.png" width="30" height="18" alt="Actual Rust-rendered badge showing 45 minutes"><span>Build something useful</span></div><p class="caption">Native badge renderer · Sample countdown · Keeps ticking with the panel closed.</p><a class="text-link" href="#try">Put the real editor through its paces ↗</a>
+      </div>
+      <div class="product-theater reveal">
+        <div class="theater-bar"><span id="view-label">The notebook</span><div class="view-toggle" aria-label="Product view"><button class="active" data-view="note" aria-pressed="true">Note</button><button data-view="day" aria-pressed="false">Day</button></div></div>
+        <div class="product-frame" id="product-frame"><img id="product-image" src="assets/showcase/mac-note.png" alt="daybound's actual Mac React notebook with tasks and a journal entry" width="880" height="1280" loading="lazy"></div>
+        <video id="walkthrough" controls playsinline preload="none" poster="assets/showcase/mac-note.png" hidden aria-label="Recorded walkthrough of checking a task, editing Markdown, moving a time block, and switching themes"><source src="assets/showcase/walkthrough.mp4" type="video/mp4"></video>
+        <button class="watch-button" id="play-button" type="button"><span aria-hidden="true">▷</span> Watch the rhythm <small>15 seconds</small></button>
+        <p class="caption">Actual app components. Fictional notes. The recording uses an isolated browser preview of the Mac UI.</p>
+      </div>
+    </section>
+    <section class="calendar-story section" id="calendar">
+      <div class="calendar-visual reveal"><iframe id="inline-calendar" title="Choose a day in the fictional Daybound notebook" hidden></iframe><img id="calendar-fallback" src="assets/showcase/calendar-closeup.png" alt="Actual daybound calendar with fictional daily notes and mood dots for September 2026" width="448" height="504" loading="lazy"><div class="date-files" aria-label="Each day has its own file"><span>2026-09-14.md</span><span>2026-09-29.md</span><span>2026-09-30.md</span></div></div>
+      <div class="calendar-copy reveal"><p class="eyebrow">A month of little moments</p><h2>Every day.<br><em>A page of its own.</em></h2><p>Pick a date and return to that day’s note. A dot marks a page you’ve written; its color holds a little memory of your mood.</p><p>Today has room for the next thought. Yesterday stays exactly where you left it.</p><a class="text-link" id="calendar-invitation" href="#try">Pick a date to open its page ↗</a><p class="caption">Actual calendar component, with fictional notes and mood data.</p></div>
+      <div class="calendar-notebook" id="calendar-notebook" hidden>
+        <div class="calendar-note-heading"><span id="selected-file" aria-live="polite">2026-09-30.md</span><button id="close-calendar-note" type="button">Back to the story ↗</button></div>
+        <iframe id="calendar-note-frame" title="Editable daily page with fictional notes"></iframe>
+        <p class="caption">Try checking a task or writing a line. Your demo edits stay here until you reload.</p>
+      </div>
+    </section>
+    <section class="pocket section" id="pocket">
+      <div class="pocket-copy reveal"><p class="eyebrow">02 / Away from your desk</p><h2>Same day.<br><em>A little closer.</em></h2><p>A thought on the train. A task before coffee. Your iPhone opens the same daily files, with a native interface made for the small moments.</p><p class="pocket-aside">And a Home Screen widget keeps Today, Later, and a glimpse of your journal within reach.</p><a class="text-link source-link" href="https://github.com/dhirajcdry/daybound/tree/main/apps/ios">Explore the iPhone companion ↗</a></div>
+      <div class="mobile-stage reveal"><figure class="phone"><img src="assets/showcase/iphone-day.png" alt="Real iPhone Simulator capture of daybound, with fictional tasks, journal, and mood" width="1206" height="2622" loading="lazy"><figcaption>Native SwiftUI app</figcaption></figure><figure class="widget"><img src="assets/showcase/widget-large.png" alt="Real SwiftUI rendering of daybound's large widget layout with Today, Later, journal, and mood" width="1092" height="1146" loading="lazy"><figcaption>Native widget layout preview</figcaption><p>The widget uses a snapshot refreshed by the iPhone app. Mac edits appear after the phone reloads the file.</p></figure></div>
+    </section>
+    <section class="file-story section" id="files">
+      <div class="section-intro reveal"><p class="eyebrow">03 / Always yours</p><h2>A lovely little app.<br><em>An ordinary little file.</em></h2><p>Close the app and the day is still there. Open it in another editor. Put it in your own folder. Keep it for years.</p></div>
+      <div class="file-demo reveal"><div class="file-tabs" aria-label="Illustrative document view"><span class="file-name">2026-09-30.md</span><div><button class="active" data-mode="page" aria-pressed="true">The page</button><button data-mode="source" aria-pressed="false">The file</button></div></div><div class="file-content" id="file-page"><h3>A little space for today</h3><p class="section-label">TODAY</p><p>☑ Sketch the first idea</p><p>○ Make the small version work</p><p class="section-label">PLAN</p><p class="plan">9:00 – 10:30 &nbsp; Design the next chapter</p><p class="section-label">JOURNAL</p><p class="journal">10:45 AM — A little less noise. A little more focus. <b>#making</b></p><small>mood: 4 — A good start</small></div><pre class="file-content source-code" id="file-source" hidden><code>## Today
+- [x] Sketch the first idea
+- [ ] Make the small version work
+
+## Plan
+9:00 – 10:30 Design the next chapter
+
+## Journal
+10:45 AM — A little less noise. A little more focus. #making
+
+mood: 4 — A good start</code></pre><p class="caption">An illustration of the format, not another app screen. One document behind every view.</p></div>
+      <div class="file-footnotes"><p><b>No separate database.</b> Just daily Markdown files and a goals page in folders you choose.</p><p><b>Your folder, your sync.</b> Choose an iCloud Drive folder on both devices. Permissions are granted separately; iCloud controls delivery timing.</p></div>
+    </section>
+    <section class="themes section" id="themes">
+      <div class="theme-head reveal"><p class="eyebrow">04 / Your kind of quiet</p><h2>Same notebook.<br><em>Different mood.</em></h2><p>Five themes, each with light and dark appearances. Every calendar, checkbox, and journal card takes its cues from the same palette.</p><div class="theme-buttons" aria-label="Preview a theme"><button class="active" data-theme="paper" aria-pressed="true">Paper</button><button data-theme="linear" aria-pressed="false">Linear</button><button data-theme="modern" aria-pressed="false">Modern</button><button data-theme="typewriter" aria-pressed="false">Typewriter</button><button data-theme="sakura" aria-pressed="false">Sakura</button></div><p id="theme-note">Warm paper. Iowan Old Style. Room to breathe.</p></div>
+      <figure class="theme-view reveal"><img id="theme-image" src="assets/showcase/theme-paper.png" alt="Actual Mac notebook components in the Paper theme" width="880" height="1280" loading="lazy"><figcaption>Actual production theme styles, with the same fictional note.</figcaption></figure>
+    </section>
+    <section class="try-section section" id="try"><div class="reveal"><p class="eyebrow">05 / A little hands-on</p><h2>Don’t just look.<br><em>Leave a thought.</em></h2><p>This demo runs the real Mac editor and Day view. Check a task, write a line, or move a block. It uses fictional data held in memory; refreshing resets it.</p><button class="button" id="open-demo" type="button" aria-expanded="false" aria-controls="demo-host">Open the interactive notebook ↗</button><div id="demo-host" hidden></div><noscript><p><a href="demo/showcase.html">Open the interactive notebook</a> (requires JavaScript).</p></noscript></div></section>
+    <section class="craft section" id="craft"><div class="section-intro reveal"><p class="eyebrow">06 / Thoughtful underneath, too</p><h2>Small app.<br><em>Careful decisions.</em></h2><p>Three surfaces, one editable text format. The interesting work is keeping them in agreement.</p></div><div class="craft-grid"><article class="reveal"><span>01</span><h3>One grammar.<br>Both platforms.</h3><p>Mac imports the TypeScript document engine. iPhone runs its bundled version through JavaScriptCore. Parsing and document rewrites share the same rules.</p><a class="source-link" href="https://github.com/dhirajcdry/daybound/tree/main/packages/document-core">Read the document engine ↗</a></article><article class="reveal"><span>02</span><h3>A clock outside<br>the webview.</h3><p>A Rust thread keeps the menubar countdown ticking while the panel is hidden. Its colored badge is drawn as a crisp retina bitmap.</p><a class="source-link" href="https://github.com/dhirajcdry/daybound/blob/main/apps/mac/src-tauri/src/plan.rs">Follow the native readout ↗</a></article><article class="reveal"><span>03</span><h3>Native where<br>it matters.</h3><p>SwiftUI for the phone. WidgetKit for the glance. The widget reads a derived snapshot; the Markdown folder remains the source of truth.</p><a class="source-link" href="https://github.com/dhirajcdry/daybound/tree/main/apps/ios">Explore the native companion ↗</a></article></div></section>
+    <section class="closing section"><div class="closing-grid"><div class="reveal"><p class="eyebrow">A personal project by Dhiraj</p><h2>Make a little<br><em>room for today.</em></h2><p class="source-pending">The source opens soon. For now, try the notebook above.</p></div><div class="setup reveal source-link"><p>Run it locally. Choose a notebook folder. Start with one small thing.</p><pre><code>git clone https://github.com/dhirajcdry/daybound.git
+cd daybound
+npm ci
+npm run tauri dev</code></pre><p class="requirements">Mac requires macOS, Node/npm, Rust, and Xcode Command Line Tools. <a class="source-link" href="https://github.com/dhirajcdry/daybound/blob/main/apps/ios/README.md">iPhone build guide ↗</a></p><a class="button source-link" href="https://github.com/dhirajcdry/daybound">Explore the source ↗</a></div></div><div class="honesty"><p>Built on <a href="https://github.com/hellorashid/daily">Daily by hellorashid</a>. daybound is Dhiraj’s independent evolution of that menubar notebook, with planning, journaling, shared document rules, and native iPhone and widget experiences.</p><p>Under active development. No daybound release pipeline or App Store distribution is configured. Upstream licensing and the inherited updater need resolving before distribution. <a class="source-link" href="https://github.com/dhirajcdry/daybound/blob/main/docs/PUBLICATION.md">Publication status ↗</a></p></div></section>
+  </main>
+  <footer><a class="wordmark" href="#top">daybound</a><span>A day, in a file you own.</span><a class="source-link" href="https://github.com/dhirajcdry/daybound">GitHub ↗</a></footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
