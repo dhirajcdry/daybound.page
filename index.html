@@ -33,7 +33,7 @@
         <p class="eyebrow"><span class="status-dot"></span>A notebook, close at hand</p>
         <h1>A day.<br>A page.<br><em>A little peace.</em></h1>
         <p class="hero-description">A little structure for the things you want to do. A little room for the things you want to say.</p>
-        <div class="hero-actions"><a class="button" href="mailto:dhirajc963@gmail.com?subject=daybound%20%E2%80%94%20Early%20access&amp;body=Hi%20Dhiraj%2C%0A%0AI%27d%20love%20early%20access%20to%20daybound.%20Please%20let%20me%20know%20how%20I%20can%20try%20it.%0A%0AThanks%21">Request early access <span aria-hidden="true">↗</span></a><a class="text-link" href="#try">Explore the demo ↗</a></div>
+        <div class="hero-actions"><a class="button" data-request-access href="mailto:dhirajc963@gmail.com?subject=daybound%20%E2%80%94%20Early%20access&amp;body=Hi%20Dhiraj%2C%0A%0AI%27d%20love%20early%20access%20to%20daybound.%20Please%20let%20me%20know%20how%20I%20can%20try%20it.%0A%0AThanks%21">Request early access <span aria-hidden="true">↗</span></a><a class="text-link" href="#try">Explore the demo ↗</a></div>
         <p class="platforms">Mac · iPhone · Home Screen <span> / </span> Designed & built by Dhiraj</p>
       </div>
       <div class="hero-art reveal"><img src="assets/showcase/hero-scene.png" alt="daybound's actual Mac notebook and Day view, native iPhone app, and SwiftUI widget layout preview with fictional notes" width="1650" height="1180" fetchpriority="high"></div>
@@ -103,9 +103,18 @@ mood: 4 — A good start</code></pre><p class="caption">An illustration of the f
     </section>
     <section class="access-section section" id="access" aria-labelledby="access-title">
       <h2 id="access-title">A little room.<br><em>For you, too.</em></h2>
-      <a class="button" href="mailto:dhirajc963@gmail.com?subject=daybound%20%E2%80%94%20Early%20access&amp;body=Hi%20Dhiraj%2C%0A%0AI%27d%20love%20early%20access%20to%20daybound.%20Please%20let%20me%20know%20how%20I%20can%20try%20it.%0A%0AThanks%21">Request early access <span aria-hidden="true">↗</span></a>
+      <a class="button" data-request-access href="mailto:dhirajc963@gmail.com?subject=daybound%20%E2%80%94%20Early%20access&amp;body=Hi%20Dhiraj%2C%0A%0AI%27d%20love%20early%20access%20to%20daybound.%20Please%20let%20me%20know%20how%20I%20can%20try%20it.%0A%0AThanks%21">Request early access <span aria-hidden="true">↗</span></a>
     </section>
     <section class="closing section" id="about"><div class="closing-grid"><div class="reveal"><p class="eyebrow">An independent project by Dhiraj</p><h2>A small product.<br><em>A lot of care.</em></h2><p>Product design, cross-platform implementation, and the details that make a daily tool feel good to use.</p></div><div class="builder-note reveal"><p class="eyebrow">What this project demonstrates</p><p>Taking a simple menubar notebook and evolving it into a coherent Mac, iPhone, and widget experience—without turning the document into a proprietary format.</p><a class="button" href="https://github.com/dhirajcdry/daybound.page">Explore the public case study ↗</a><p class="caption">App source stays private. This repository contains the presentation website, approved media, and engineering notes.</p></div></div><div class="honesty"><p>Daybound began as a personal fork of <a href="https://github.com/hellorashid/daily">Daily by hellorashid</a>. That menubar notebook is its foundation; the planning, journaling, shared document engine, native iPhone companion, and widget experience are its subsequent evolution.</p><p>Under active development. No public binary download or App Store distribution is offered here. Screenshots use fictional notes. Mac imagery comes from a component preview; iPhone imagery comes from Simulator; widgets are native layout renders. iCloud delivery and notification visibility depend on system settings.</p></div></section>
+    <dialog id="access-dialog" aria-labelledby="access-dialog-title">
+      <button class="access-dialog-close" id="close-access-dialog" type="button" aria-label="Close early access request">×</button>
+      <h2 id="access-dialog-title">Request early access</h2>
+      <div class="access-mail-options">
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dhirajc963%40gmail.com&amp;su=daybound%20%E2%80%94%20Early%20access&amp;body=Hi%20Dhiraj%2C%0A%0AI%27d%20love%20early%20access%20to%20daybound.%20Please%20let%20me%20know%20how%20I%20can%20try%20it.%0A%0AThanks%21" target="_blank" rel="noopener noreferrer">Gmail <span aria-hidden="true">↗</span></a>
+        <a href="https://outlook.live.com/mail/0/deeplink/compose?to=dhirajc963%40gmail.com&amp;subject=daybound%20%E2%80%94%20Early%20access&amp;body=Hi%20Dhiraj%2C%0A%0AI%27d%20love%20early%20access%20to%20daybound.%20Please%20let%20me%20know%20how%20I%20can%20try%20it.%0A%0AThanks%21" target="_blank" rel="noopener noreferrer">Outlook <span aria-hidden="true">↗</span></a>
+        <a href="mailto:dhirajc963@gmail.com?subject=daybound%20%E2%80%94%20Early%20access&amp;body=Hi%20Dhiraj%2C%0A%0AI%27d%20love%20early%20access%20to%20daybound.%20Please%20let%20me%20know%20how%20I%20can%20try%20it.%0A%0AThanks%21">Mail app <span aria-hidden="true">↗</span></a>
+      </div>
+    </dialog>
     <dialog id="image-dialog"><button id="close-image" type="button" aria-label="Close enlarged screenshot">Close ×</button><img id="enlarged-image" alt=""><p id="enlarged-caption"></p></dialog>
   </main>
   <footer><a class="wordmark" href="#top">daybound</a><span>A day, in a file you own.</span><a href="https://github.com/dhirajcdry/daybound.page">Project showcase ↗</a></footer>

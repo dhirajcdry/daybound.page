@@ -145,3 +145,16 @@ const imageDialog=q('#image-dialog');
 qa('[data-zoom]').forEach(button=>button.addEventListener('click',()=>{q('#enlarged-image').src=`assets/showcase/${button.dataset.zoom}`;q('#enlarged-image').alt=button.querySelector('img').alt;q('#enlarged-caption').textContent=button.querySelector('img').alt;imageDialog.showModal();}));
 q('#close-image').addEventListener('click',()=>imageDialog.close());
 imageDialog.addEventListener('click',event=>{if(event.target===imageDialog)imageDialog.close();});
+
+const accessDialog = q('#access-dialog');
+qa('[data-request-access]').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
+  accessDialog.showModal();
+}));
+q('#close-access-dialog').addEventListener('click', () => accessDialog.close());
+accessDialog.addEventListener('click', event => {
+  if (event.target === accessDialog) {
+    const bounds = accessDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) accessDialog.close();
+  }
+});
