@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="How Daybound connects a live Markdown editor, native visual planning, and SwiftUI widgets through one document model."><title>daybound · Engineering case study</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/logo-app.svg"></head><body><header class="site-header"><a class="wordmark" href="./">daybound</a><nav><a href="./#craft">Back to the product ↗</a></nav></header><main class="engineering-page"><p class="eyebrow">Behind the experience / Dhiraj</p><h1>Engineering case study</h1><h2>One file, three surfaces</h2><p>daybound is a local first notebook whose durable model is a folder of Markdown
+files. The Mac shell is Tauri 2 with a Rust backend and a React 19 frontend.
+The iPhone app is SwiftUI. Both platforms interpret the same document dialect
+through a shared document core: one TypeScript grammar feeds parsing,
+journal extraction, inline tags, task operations, and the day plan. The iPhone
+bundles a deliberately small JavaScriptCore bridge rather than maintaining a
+second parser in Swift.</p><h2>A readable page that is still an editor</h2><p>The editor is live preview. CodeMirror decorations hide Markdown syntax on
+inactive lines and reveal it at the caret, so reading and editing share one
+surface. Programmatic rewrites use a common prefix and suffix diff to preserve
+the selection and caret. Task reordering is a transaction on the source text;
+the drag layer is only a visual projection while the operation is in flight.</p><h2>The timeline is a projection, not a second database</h2><p>The Day view treats the <code>## Plan</code> section as a projection of the same file.
+Time block insert, move, resize, rename, removal, outcome updates, reminder
+overrides, pushes, and follow-up sessions are owned by plan logic that returns
+new note text. A reviewed block keeps its history. A follow-up inherits only
+the reminder override. Reviewed blocks and overlaps are checked before a move,
+and rejected operations explain the conflict instead of silently changing the
+schedule.</p><h2>Native work survives the hidden webview</h2><p>The Mac menubar readout is native Rust because the hidden web view cannot be
+trusted to keep JavaScript timers alive. Rust selects the current block, or a
+nearby upcoming block, updates the title, and swaps a pre-rendered SF Symbol
+template for the task icon. When there is nothing imminent it paints an idle
+icon and an empty title. The Mac reminder scheduler also lives in Rust, keys
+delivery to the active notebook and date, persists delivery state, and avoids
+replaying stale alerts after sleep.</p><h2>A native companion and a bounded widget snapshot</h2><p>The iPhone keeps plan presentation in shared SwiftUI types. The app and widgets
+share task colours, task symbols, and a derived day snapshot through the app
+group. Tasks and Plan are two faces of the widget; small, medium, and large
+layouts expose different amounts of the same snapshot. The app refreshes that
+snapshot after loading or editing a note, while the Markdown file remains the
+source of truth. Conflict detection protects an on-screen edit when the file
+changes elsewhere and gives the user a deliberate resolution path.</p><h2>Tradeoffs and verification</h2><p>Document-model tests exercise parsing and rewrites. Headless browser tests drive the real editor and timeline, including task rendering and snapped drag positions. Native reminder checks exercise scheduling behavior. A scheduled request alone does not prove that a notification banner appeared.</p><p>These choices have clear limits. A notebook is still a file, so iCloud and
+other sync providers decide when another device sees an edit. The public demo
+uses fictional in-memory data and cannot demonstrate native file access,
+notifications, menubar behavior, or widget refresh. Native notification
+delivery and real-device sync require platform permission and hardware checks.</p><h2>Origin and scope</h2><p>The project began as a personal fork of <a href="https://github.com/hellorashid/daily">Daily</a>.
+This case study describes the current product and does not reproduce private
+source paths, credentials, or large source excerpts. Upstream attribution and
+redistribution terms still need explicit review before distributing builds.</p><p><a href="https://daybound.page">Explore the product</a> · <a href="https://github.com/dhirajcdry/daybound.page">Back to the showcase</a></p></main><footer><a href="./">daybound.page</a><span>Private implementation. Public engineering story.</span></footer></body></html>
