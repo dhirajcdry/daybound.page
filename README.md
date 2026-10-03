@@ -1,7 +1,7 @@
 <p align="center"><a href="https://daybound.page"><img src="assets/showcase/hero.png" alt="Daybound: a daily notebook, visual planner, native iPhone app, and Home Screen widgets" width="100%"></a></p>
 
 <p align="center"><strong>A day. A page. A little peace.</strong><br>Plans, tasks, and passing thoughts—one plain Markdown file per day.</p>
-<p align="center"><a href="https://daybound.page">Explore the experience ↗</a> · <a href="https://daybound.page/#planner">The planner</a> · <a href="https://daybound.page/#pocket">iPhone & widgets</a> · <a href="ENGINEERING.md">Engineering case study</a></p>
+<p align="center"><a href="https://daybound.page">Explore the experience ↗</a> · <a href="https://daybound.page/#access">Request early access</a> · <a href="https://daybound.page/#planner">The planner</a> · <a href="https://daybound.page/#pocket">iPhone & widgets</a> · <a href="ENGINEERING.md">Engineering case study</a></p>
 <p align="center"><sub>An independent product and engineering project by Dhiraj.<br>React 19 · CodeMirror 6 · Tauri 2 · Rust · SwiftUI · JavaScriptCore · WidgetKit</sub></p>
 
 ## Small enough for every day. Thoughtful enough to keep.
