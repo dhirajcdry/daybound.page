@@ -145,16 +145,3 @@ const imageDialog=q('#image-dialog');
 qa('[data-zoom]').forEach(button=>button.addEventListener('click',()=>{q('#enlarged-image').src=`assets/showcase/${button.dataset.zoom}`;q('#enlarged-image').alt=button.querySelector('img').alt;q('#enlarged-caption').textContent=button.querySelector('img').alt;imageDialog.showModal();}));
 q('#close-image').addEventListener('click',()=>imageDialog.close());
 imageDialog.addEventListener('click',event=>{if(event.target===imageDialog)imageDialog.close();});
-
-const copyAccessEmail = q('#copy-access-email');
-if (navigator.clipboard?.writeText) {
-  copyAccessEmail.hidden = false;
-  copyAccessEmail.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText('dhirajc963@gmail.com');
-      q('#access-copy-status').textContent = 'Email address copied. Paste it into your email app.';
-    } catch {
-      q('#access-copy-status').textContent = 'Please select and copy the email address above.';
-    }
-  });
-}
