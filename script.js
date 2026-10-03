@@ -158,3 +158,17 @@ accessDialog.addEventListener('click', event => {
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) accessDialog.close();
   }
 });
+
+const copyRequest = q('#copy-request');
+if (navigator.clipboard?.writeText) {
+  copyRequest.hidden = false;
+  copyRequest.addEventListener('click', async () => {
+    const text = `To: ${q('#access-recipient').textContent}\nSubject: ${q('#access-subject').textContent}\n\n${q('#access-message').textContent}`;
+    try {
+      await navigator.clipboard.writeText(text);
+      q('#copy-request-status').textContent = 'Copied';
+    } catch {
+      q('#copy-request-status').textContent = 'Select the text above to copy it.';
+    }
+  });
+}
